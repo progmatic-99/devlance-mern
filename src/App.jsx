@@ -32,10 +32,10 @@ function App() {
       setUser({
         name: `${userData.name.first} ${userData.name.last}`,
         gender: userData.gender,
+        dob: new Date(userData.dob.date).toDateString(),
         email: userData.email,
-        dob: userData.dob.date,
-        password: userData.login.password,
         username: userData.login.username,
+        password: userData.login.password,
         address: `${userData.location.street.number}, ${userData.location.street.name}, ${userData.location.city}, ${userData.location.state}, ${userData.location.country}`,
         userImg: userData.picture.large,
       });
